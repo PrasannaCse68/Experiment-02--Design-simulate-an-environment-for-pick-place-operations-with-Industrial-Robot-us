@@ -25,7 +25,7 @@ Inspection – Pick and place robots used for inspection applications are equipp
 
 
 ### PROCEDURE:
-```	 
+
 Select a robot New robots can be added from a local drive or from the online library:
 
 Select File Open online library (Ctrl+Shift+O). A new nested window will appear showing the online library It is also possible to select the corresponding button in the toolbar. Use the filters to find your robot by brand, payload, ... In this example, we will use a UR10 robot (10 kg payload robot and 1.3 m reach). Select Download. The robot should automatically appear in the station in a few seconds. The online library can be closed once the robot is loaded Tip: Selecting reset filter in the online library will remove any filter that was use Tip: Alternatively, it is also possible to download the robot files (.robot extension) separately, from the website: http://robodk.com/library and open them in RoboDK by drag & dropping the file to the main window or by selecting FileOpen. Note: Every time a new robot is loaded in RoboDK, a new reference frame is added representing the robot base frame. Note: Loading robots from the online library will store them in the local library. The default location of this folder is: C:/RoboDK/Library/.
@@ -49,29 +49,13 @@ Double click the robot to show the robot panel Select Paint gun as the Tool Fram
 Rename the first target as Home by pressing F2. Alternatively, select ToolsRename item. Move the robot closer to one edge of the part (by dragging the tool using the Alt key, entering coordinates or jogging the axis manually) In this example we used the following robot joint coordinates [0,0,200,180,0,180] deg. Select Program Teach Target (Ctrl+T) or the appropriate button in the toolbar to create a new target Rename the target to Approach as shown in step 7 Select the Home target and the Approach target alternatively to see the robot moving between the two targets Right click the target and select Teach Current Position (Alt+double click) if a different position needs to be recorded for one of the targets Right click the target and select Target Options… (F3) to open the target options window shown in the next image
 
 
-```
 
-### SIMULATION
-
-![image](https://github.com/PrasannaCse68/Experiment-02--Design-simulate-an-environment-for-pick-place-operations-with-Industrial-Robot-us/assets/127935950/0312cade-4239-4420-b549-7bd12530af6e)
-
-
-
-![image](https://github.com/PrasannaCse68/Experiment-02--Design-simulate-an-environment-for-pick-place-operations-with-Industrial-Robot-us/assets/127935950/b4163880-96f5-4aa9-861e-e9feb49b214d)
-
-
-![image](https://github.com/PrasannaCse68/Experiment-02--Design-simulate-an-environment-for-pick-place-operations-with-Industrial-Robot-us/assets/127935950/04dbd868-21b8-4a24-811d-28f11cc0783d)
-
-
-![image](https://github.com/PrasannaCse68/Experiment-02--Design-simulate-an-environment-for-pick-place-operations-with-Industrial-Robot-us/assets/127935950/319d9c78-9411-40de-8f7f-ada412e96fbf)
-
-
-![image](https://github.com/PrasannaCse68/Experiment-02--Design-simulate-an-environment-for-pick-place-operations-with-Industrial-Robot-us/assets/127935950/31b366a8-7963-4da7-90bb-2438b5b1ca05)
 
 ### PROGRAM 
- 
+
+ ```
 PICKANDPLACE()
-```
+
 # RoboDK Python Intermediate file to generate robot programs.
 # Program name: PICKANDPLACE
 # This file requires the post processor: 
@@ -113,6 +97,26 @@ r.ProgFinish(r"""PICKANDPLACE""")
 r.ProgSave(r"""D:\RoboDK\Posts""",r"""PICKANDPLACE""",True,r"""D:\RoboDK\Other\VSCodium\VSCodium.exe""")
  
  ```
+
+
+### SIMULATION
+
+![image](https://github.com/PrasannaCse68/Experiment-02--Design-simulate-an-environment-for-pick-place-operations-with-Industrial-Robot-us/assets/127935950/0312cade-4239-4420-b549-7bd12530af6e)
+
+
+
+![image](https://github.com/PrasannaCse68/Experiment-02--Design-simulate-an-environment-for-pick-place-operations-with-Industrial-Robot-us/assets/127935950/b4163880-96f5-4aa9-861e-e9feb49b214d)
+
+
+![image](https://github.com/PrasannaCse68/Experiment-02--Design-simulate-an-environment-for-pick-place-operations-with-Industrial-Robot-us/assets/127935950/04dbd868-21b8-4a24-811d-28f11cc0783d)
+
+
+![image](https://github.com/PrasannaCse68/Experiment-02--Design-simulate-an-environment-for-pick-place-operations-with-Industrial-Robot-us/assets/127935950/319d9c78-9411-40de-8f7f-ada412e96fbf)
+
+
+![image](https://github.com/PrasannaCse68/Experiment-02--Design-simulate-an-environment-for-pick-place-operations-with-Industrial-Robot-us/assets/127935950/31b366a8-7963-4da7-90bb-2438b5b1ca05)
+
+
  
  
  
